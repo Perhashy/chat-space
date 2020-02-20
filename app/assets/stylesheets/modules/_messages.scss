@@ -1,3 +1,44 @@
 * {
   box-sizing: border-box;
 }
+
+.wrapper{
+  height: 100vh;
+  display: flex;
+  .side-bar{
+    background-color: #253141;
+    width: 300px;
+    height: 100%;
+    &__user-name{
+      height: 100px;
+      width: 300px;
+      background-color: #253141;
+    }
+    &__group-list{
+      height: calc(100vh - 100px);
+      width: 300px;
+      background-color: #2f3e51;
+    }
+  }
+  .chat-main{
+    background-color: #fff;
+    width: calc(100vw - 300px);
+    height: 100%;
+    &__group-info{
+      height: 100px;
+      width: calc(100vw - 300px);
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+    }
+    &__massage-list{
+      height: calc(100vh - 190px);
+      width: calc(100vw - 300px);
+      background-color: #fafafa;
+    }
+    &__massage-form{
+      height: 90px;
+      width: calc(100vw - 300px);
+      background-color: #d2d2d2;
+    }
+  }
+}
