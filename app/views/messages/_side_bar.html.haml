@@ -1,9 +1,16 @@
-.side-bar
-  .side-bar__user-name
-    .top-items
-      .top-items__name
+.side
+  .side-header
+    .side-items
+      .side-items__name
         masa
-      .top-items__icon
-        = link_to "#", class: "top-items__btn" do
-          = icon('far', 'edit', class: "top-items__btn--icon")
-  .side-bar__group-list
+      .side-items__icon
+        = link_to "#", class: "side-btn" do
+          = icon('far', 'edit', class: "side-btn__icon")
+        = link_to "#", class: "side-icon" do
+          = icon('fas', 'cog', class: "side-btn__icon")
+  .side-groups
+    .group
+      .group__group-name
+        techcamp
+      .group__group-message
+        まだメッセージがありません

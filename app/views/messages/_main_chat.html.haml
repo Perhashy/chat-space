@@ -1,4 +1,32 @@
-.chat-main
-  .chat-main__group-info
-  .chat-main__massage-list
-  .chat-main__massage-form
+.main
+  .main-header
+    .main-items
+      .main-items__name
+        test
+      .main-items__group
+        Member:
+        .main-items__group--list
+          masa
+    .main-edit
+      = link_to "Edit", "#", class: "main-edit__link"
+  .main-message
+    .messages
+      .messages-user
+        .messages-user__name
+          masa
+        .messages-user__date
+          2020/02/20(fly) 17:30
+      .messages-text
+        おはよう
+    .messages
+      .messages-user
+        .messages-user__name
+          masa
+        .messages-user__date
+          2020/02/20(fly) 17:30
+      .messages-text
+        おはよう
+  .main-form
+    .input-box
+      %input.input-box__text{:name => "text", :placeholder => "type a message", :type => "text"}/
+    %input.submit-btn{:name => "commit", :type => "submit", :value => "Send"}/
