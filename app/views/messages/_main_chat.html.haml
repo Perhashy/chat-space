@@ -4,7 +4,7 @@
       .main-items__name
         test
       .main-items__group
-        Member:
+        Member：
         .main-items__group--list
           masa
     .main-edit
@@ -27,6 +27,10 @@
       .messages-text
         おはよう
   .main-form
-    .input-box
-      %input.input-box__text{:name => "text", :placeholder => "type a message", :type => "text"}/
-    %input.submit-btn{:name => "commit", :type => "submit", :value => "Send"}/
+    .input
+      .input-box
+        %input.input-box__text{:name => "text", :placeholder => "type a message", :type => "text"}/
+        %label{class: "input-box__image"}
+          = icon('far', 'image')
+          %input.input-box__image--file{type: "file"}
+      %input.input-submit{:name => "commit", :type => "submit", :value => "Send"}/
