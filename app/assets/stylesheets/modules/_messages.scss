@@ -1,3 +1,7 @@
+$main-white-color: #fff;
+$side-width: 300px;
+$main-width: calc(100vw - 300px);
+
 * {
   box-sizing: border-box;
 }
@@ -7,16 +11,16 @@
   display: flex;
 
   .side{
-    background-color: #253141;
-    width: 300px;
     height: 100%;
+    width: $side-width;
+    background-color: #253141;
 
     &-header{
       height: 100px;
-      width: 300px;
+      width: $side-width;
       background-color: #253141;
-      display: flex;
       align-items: center;
+      display: flex;
 
       .side-items{
         height: 20px;
@@ -27,7 +31,7 @@
 
         &__name{
           font-size: 16px;
-          color: #fff;
+          color: $main-white-color;
           font-weight: bold;
           line-height: 20px;
         }
@@ -39,12 +43,12 @@
           text-align: right;
 
           .side-btn{
-            text-decoration: none;
-            margin-left: 5px;
             font-size: 14px;
+            margin-left: 5px;
+            text-decoration: none;
 
             &__icon{
-              color: #fff;
+              color: $main-white-color;
               cursor: pointer;
             }
           }
@@ -54,38 +58,42 @@
 
     &-groups{
       height: calc(100vh - 100px);
-      width: 300px;
+      width: $side-width;
       background-color: #2f3e51;
       padding: 20px;
 
-      .group{
-        margin-bottom: 40px;
+      &__link{
+        text-decoration: none;
 
-        &__group-name{
-          font-size: 15px;
-          color: #fff;
-          margin-bottom: 5px;
-          font-weight: bold;
-        }
+        .group{
+          margin-bottom: 40px;
 
-        &__group-message{
-          font-size: 11px;
-          color: #fff;
-          font-weight: bold;
+          &__group-name{
+            font-size: 15px;
+            color: $main-white-color;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+
+          &__group-message{
+            font-size: 11px;
+            color: $main-white-color;
+            font-weight: bold;
+          }
         }
       }
     }
   }
 
   .main{
-    background-color: #fff;
-    width: calc(100vw - 300px);
     height: 100%;
+    width: $main-width;
+    background-color: $main-white-color;
 
     &-header{
       height: 100px;
-      width: calc(100vw - 300px);
-      background-color: #fff;
+      width: $main-width;
+      background-color: $main-white-color;
       border-bottom: 1px solid #eee;
       padding: 0 40px;
       display: flex;
@@ -118,16 +126,16 @@
         cursor: pointer;
 
         &__link{
-          text-decoration: none;
           color: #38aef0;
           line-height: 40px;
+          text-decoration: none;
         }
       }
     }
 
     &-message{
       height: calc(100vh - 190px);
-      width: calc(100vw - 300px);
+      width: $main-width;
       background-color: #fafafa;
       padding: 35px 40px;
 
@@ -135,12 +143,13 @@
         margin-bottom: 46px;
 
         &-user{
-          display: flex;
           margin-bottom: 12px;
+          display: flex;
 
           &__name{
             font-size: 16px;
             color: #333;
+            font-weight: bold;
           }
 
           &__date{
@@ -159,7 +168,7 @@
 
     &-form{
       height: 90px;
-      width: calc(100vw - 300px);
+      width: $main-width;
       background-color: #d2d2d2;
       padding: 20px 40px;
 
@@ -178,11 +187,11 @@
           }
 
           &__image{
-            position: absolute;
             top: 10px;
             right: 10px;
-            cursor: pointer;
             font-size: 24px;
+            position: absolute;
+            cursor: pointer;
 
             &--file{
               display: none;
@@ -193,11 +202,11 @@
         &-submit{
           height: 50px;
           width: 100px;
-          margin-left: 15px;
-          font-size: 16px;
-          padding: 0 30px;
           background-color: #38aef0;
-          color: #fff;
+          font-size: 16px;
+          color: $main-white-color;
+          margin-left: 15px;
+          padding: 0 30px;
           cursor: pointer;
         }
       }

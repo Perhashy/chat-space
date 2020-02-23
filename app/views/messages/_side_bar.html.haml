@@ -2,15 +2,16 @@
   .side-header
     .side-items
       .side-items__name
-        masa
+        hashy
       .side-items__icon
         = link_to "#", class: "side-btn" do
           = icon('fa', 'edit', class: "side-btn__icon")
         = link_to "#", class: "side-btn" do
           = icon('fa', 'cog', class: "side-btn__icon")
   .side-groups
-    .group
-      .group__group-name
-        techcamp
-      .group__group-message
-        まだメッセージがありません
+    = link_to "#", class: "side-groups__link" do
+      .group
+        .group__group-name
+          techcamp
+        .group__group-message
+          まだメッセージがありません
