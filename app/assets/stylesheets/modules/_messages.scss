@@ -62,11 +62,11 @@ $main-width: calc(100vw - 300px);
       background-color: #2f3e51;
       padding: 20px;
 
-      &__link{
-        text-decoration: none;
+      .group{
+        margin-bottom: 40px;
 
-        .group{
-          margin-bottom: 40px;
+        &-link{
+          text-decoration: none;
 
           &__group-name{
             font-size: 15px;
