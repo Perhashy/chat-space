@@ -1,1 +1,36 @@
-＜チャット画面＞
+.main
+  .main-header
+    .main-items
+      .main-items__name
+        techcamp
+      .main-items__group
+        Member：
+        .main-items__group--list
+          hashy
+    .main-edit
+      = link_to "Edit", "#", class: "main-edit__link"
+  .main-message
+    .messages
+      .messages-user
+        .messages-user__name
+          masa
+        .messages-user__date
+          2020/02/20(fly) 17:30
+      .messages-text
+        おはよう
+    .messages
+      .messages-user
+        .messages-user__name
+          masa
+        .messages-user__date
+          2020/02/20(fly) 17:30
+      .messages-text
+        おはよう
+  .main-form
+    .input
+      .input-box
+        %input.input-box__text{:name => "text", :placeholder => "type a message", :type => "text"}/
+        %label{class: "input-box__image"}
+          = icon('far', 'image')
+          %input.input-box__image--file{type: "file"}
+      %input.input-submit{:name => "commit", :type => "submit", :value => "Send"}/

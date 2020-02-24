@@ -1,3 +1,215 @@
+$main-white-color: #fff;
+$side-width: 300px;
+$main-width: calc(100vw - 300px);
+
 * {
   box-sizing: border-box;
+}
+
+.wrapper{
+  height: 100vh;
+  display: flex;
+
+  .side{
+    height: 100%;
+    width: $side-width;
+    background-color: #253141;
+
+    &-header{
+      height: 100px;
+      width: $side-width;
+      background-color: #253141;
+      align-items: center;
+      display: flex;
+
+      .side-items{
+        height: 20px;
+        width: 260px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        &__name{
+          font-size: 16px;
+          color: $main-white-color;
+          font-weight: bold;
+          line-height: 20px;
+        }
+
+        &__icon{
+          height: 20px;
+          width: 60px;
+          line-height: 20px;
+          text-align: right;
+
+          .side-btn{
+            font-size: 14px;
+            margin-left: 5px;
+            text-decoration: none;
+
+            &__icon{
+              color: $main-white-color;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    &-groups{
+      height: calc(100vh - 100px);
+      width: $side-width;
+      background-color: #2f3e51;
+      padding: 20px;
+
+      &__link{
+        text-decoration: none;
+
+        .group{
+          margin-bottom: 40px;
+
+          &__group-name{
+            font-size: 15px;
+            color: $main-white-color;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+
+          &__group-message{
+            font-size: 11px;
+            color: $main-white-color;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .main{
+    height: 100%;
+    width: $main-width;
+    background-color: $main-white-color;
+
+    &-header{
+      height: 100px;
+      width: $main-width;
+      background-color: $main-white-color;
+      border-bottom: 1px solid #eee;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+
+      .main-items{
+        margin-top: 35px;
+
+        &__name{
+          font-size: 20px;
+          color: #333;
+          margin-bottom: 15px;
+        }
+
+        &__group{
+          font-size: 12px;
+          color: #999;
+          display: flex;
+        }
+      }
+
+      .main-edit{
+        height: 40px;
+        width: 72px;
+        border: 1px solid;
+        margin-top: 28px;
+        padding: 0 20px;
+        color: #38aef0;
+        text-align: center;
+        cursor: pointer;
+
+        &__link{
+          color: #38aef0;
+          line-height: 40px;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &-message{
+      height: calc(100vh - 190px);
+      width: $main-width;
+      background-color: #fafafa;
+      padding: 35px 40px;
+
+      .messages{
+        margin-bottom: 46px;
+
+        &-user{
+          margin-bottom: 12px;
+          display: flex;
+
+          &__name{
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+          }
+
+          &__date{
+            font-size: 12px;
+            color: #999;
+            margin-left: 10px;
+          }
+        }
+
+        &-text{
+          font-size: 14px;
+          color: #434a54;
+        }
+      }
+    }
+
+    &-form{
+      height: 90px;
+      width: $main-width;
+      background-color: #d2d2d2;
+      padding: 20px 40px;
+
+      .input{
+        display: flex;
+
+        &-box{
+          width: 100%;
+          position: relative;
+
+          &__text{
+            height: 50px;
+            width: 100%;
+            padding: 0 40px 0 10px;
+            border-style: none;
+          }
+
+          &__image{
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            position: absolute;
+            cursor: pointer;
+
+            &--file{
+              display: none;
+            }
+          }
+        }
+
+        &-submit{
+          height: 50px;
+          width: 100px;
+          background-color: #38aef0;
+          font-size: 16px;
+          color: $main-white-color;
+          margin-left: 15px;
+          padding: 0 30px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
