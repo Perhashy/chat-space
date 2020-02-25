@@ -159,7 +159,7 @@ $main-width: calc(100vw - 300px);
           }
         }
 
-        &-text{
+        &-content{
           font-size: 14px;
           color: #434a54;
         }
@@ -172,10 +172,10 @@ $main-width: calc(100vw - 300px);
       background-color: #d2d2d2;
       padding: 20px 40px;
 
-      .input{
+      form{
         display: flex;
 
-        &-box{
+        .input-box{
           width: 100%;
           position: relative;
 
@@ -199,7 +199,7 @@ $main-width: calc(100vw - 300px);
           }
         }
 
-        &-submit{
+        .input-submit{
           height: 50px;
           width: 100px;
           background-color: #38aef0;

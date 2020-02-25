@@ -2,35 +2,22 @@
   .main-header
     .main-items
       .main-items__name
-        techcamp
+        = @group.name
       .main-items__group
         Member：
         .main-items__group--list
-          hashy
+          - @group.users.each do |user|
+            = user.name
     .main-edit
-      = link_to "Edit", "#", class: "main-edit__link"
+      = link_to "Edit", edit_group_path(@group), class: "main-edit__link"
   .main-message
-    .messages
-      .messages-user
-        .messages-user__name
-          masa
-        .messages-user__date
-          2020/02/20(fly) 17:30
-      .messages-text
-        おはよう
-    .messages
-      .messages-user
-        .messages-user__name
-          masa
-        .messages-user__date
-          2020/02/20(fly) 17:30
-      .messages-text
-        おはよう
+    = render @messages
+
   .main-form
-    .input
+    = form_for [@group, @message] do |f|
       .input-box
-        %input.input-box__text{:name => "text", :placeholder => "type a message", :type => "text"}/
-        %label{class: "input-box__image"}
+        = f.text_field :content, class: "input-box__text", placeholder: 'type a message'
+        = f.label :image, class: "input-box__image" do
           = icon('far', 'image')
-          %input.input-box__image--file{type: "file"}
-      %input.input-submit{:name => "commit", :type => "submit", :value => "Send"}/
+          = f.file_field :image, class: "input-box__image--file"
+      = f.submit 'Send', class: "input-submit"
