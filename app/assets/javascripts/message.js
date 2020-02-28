@@ -58,10 +58,12 @@ $(function(){
       $('.main-message').append(html);
       $('form')[0].reset();
       $('.main-message').animate({ scrollTop: $('.main-message')[0].scrollHeight});
-      $('.input-submit').removeAttr("disabled");
     })
     .fail(function(){
       alert("メッセージ送信に失敗しました")
+    })
+    .always(function(){
+      $('.input-submit').removeAttr("disabled");
     });
   });
 });

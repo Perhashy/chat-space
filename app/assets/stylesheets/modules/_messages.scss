@@ -1,4 +1,5 @@
 $main-white-color: #fff;
+$submit-color: #38aef0;
 $side-width: 300px;
 $main-width: calc(100vw - 300px);
 
@@ -121,12 +122,12 @@ $main-width: calc(100vw - 300px);
         border: 1px solid;
         margin-top: 28px;
         padding: 0 20px;
-        color: #38aef0;
+        color: $submit-color;
         text-align: center;
         cursor: pointer;
 
         &__link{
-          color: #38aef0;
+          color: $submit-color;
           line-height: 40px;
           text-decoration: none;
         }
@@ -212,7 +213,7 @@ $main-width: calc(100vw - 300px);
         .input-submit{
           height: 50px;
           width: 100px;
-          background-color: #38aef0;
+          background-color: $submit-color;
           font-size: 16px;
           color: $main-white-color;
           margin-left: 15px;
