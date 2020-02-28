@@ -138,6 +138,7 @@ $main-width: calc(100vw - 300px);
       width: $main-width;
       background-color: #fafafa;
       padding: 35px 40px;
+      overflow: scroll;
 
       .messages{
         margin-bottom: 46px;
@@ -162,6 +163,15 @@ $main-width: calc(100vw - 300px);
         &-content{
           font-size: 14px;
           color: #434a54;
+
+          &__text{
+            margin-bottom: 10px;
+          }
+
+          &__image{
+            width: auto;
+            max-height: 200px;
+          }
         }
       }
     }
