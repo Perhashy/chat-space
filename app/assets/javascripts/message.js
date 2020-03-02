@@ -2,54 +2,54 @@ $(function(){
     var buildHTML = function(message){
       if ( message.content && message.image ) {
         var html =
-          `<div class="messages" data-message-id=` + message.id + `>` +
-            `<div class="messages-user">` +
-              `<div class="messages-user__name">` +
-                message.user_name +
-              `</div>` +
-              `<div class="messages-user__date">` +
-                message.created_at +
-              `</div>` +
-            `</div>` +
-            `<div class="messages-content">` +
-              `<p class="messages-content__text">` +
-                message.content +
-              `</p>` +
-              `<img src="` + message.image + `" class="messages-content__image" >` +
-            `</div>` +
-          `</div>`
+          `<div class="messages" data-message-id= ${message.id} >
+            <div class="messages-user">
+              <div class="messages-user__name">
+                ${message.user_name}
+              </div>
+              <div class="messages-user__date">
+                ${message.created_at}
+              </div>
+            </div>
+            <div class="messages-content">
+              <p class="messages-content__text">
+                ${message.content}
+              </p>
+              <img src=" ${message.image} " class="messages-content__image" >
+            </div>
+          </div>`
       } else if (message.content){
         var html =
-          `<div class="messages" data-message-id=` + message.id + `>` +
-            `<div class="messages-user">` +
-              `<div class="messages-user__name">` +
-                message.user_name +
-              `</div>` +
-              `<div class="messages-user__date">` +
-                message.created_at +
-              `</div>` +
-            `</div>` +
-            `<div class="messages-content">` +
-              `<p class="messages-content__text">` +
-                message.content +
-              `</p>` +
-            `</div>` +
-          `</div>`
+          `<div class="messages" data-message-id= ${message.id} >
+            <div class="messages-user">
+              <div class="messages-user__name">
+                ${message.user_name}
+              </div>
+              <div class="messages-user__date">
+                ${message.created_at}
+              </div>
+            </div>
+            <div class="messages-content">
+              <p class="messages-content__text">
+                ${message.content}
+              </p>
+            </div>
+          </div>`
       } else if (message.image){
         var html =
-        `<div class="messages" data-message-id=` + message.id + `>` +
-        `<div class="messages-user">` +
-          `<div class="messages-user__name">` +
-            message.user_name +
-          `</div>` +
-          `<div class="messages-user__date">` +
-            message.created_at +
-          `</div>` +
-        `</div>` +
-        `<div class="messages-content">` +
-          `<img src="` + message.image + `" class="messages-content__image" >` +
-          `</div>` +
-        `</div>`
+        `<div class="messages" data-message-id= ${message.id} >
+        <div class="messages-user">
+          <div class="messages-user__name">
+            ${message.user_name}
+          </div>
+          <div class="messages-user__date">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="messages-content">
+          <img src=" ${message.image} " class="messages-content__image" >
+          </div>
+        </div>`
       };
       return html;
     };
